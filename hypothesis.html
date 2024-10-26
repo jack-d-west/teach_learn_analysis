@@ -41,19 +41,52 @@
         </nav>
     </header>
     <main>
-        <section id="hypothesis-testing">
-            <h2 style="text-align: left;">Hypothesis Testing</h2>
-            <p style="text-align: left;">Hypothesis testing is a statistical method used in data analytics to determine the validity of an assumption (the hypothesis) about a population based on sample data. It helps analysts make inferences and assess relationships, ultimately guiding data-driven decisions.</p>
-            <p style="text-align: left;">There are typically five steps in hypothesis testing:</p>
-            <ol style="text-align: left;">
-                <li>Formulating the null and alternative hypotheses.</li>
-                <li>Choosing a significance level (α).</li>
-                <li>Calculating a test statistic based on sample data.</li>
-                <li>Determining the p-value or critical value to compare against the test statistic.</li>
-                <li>Drawing a conclusion: reject or fail to reject the null hypothesis.</li>
-            </ol>
-            <p style="text-align: left;">Understanding hypothesis testing is crucial for evaluating relationships in data and validating models in analytics. This topic is divided into sessions covering different hypothesis testing methods and approaches.</p>
-        </section>
+<section id="hypothesis-testing">
+    <h2>Hypothesis Testing</h2>
+    <p>Hypothesis testing is a statistical method used to make inferences or draw conclusions about a population based on sample data. It helps determine if there's enough evidence to support a certain claim or assumption, known as the <strong>hypothesis</strong>.</p>
+
+    <h3>Key Steps in Hypothesis Testing:</h3>
+    <ol>
+        <li><strong>Formulate Hypotheses</strong>
+            <ul>
+                <li><strong>Null Hypothesis (H<sub>0</sub>)</strong>: A statement suggesting there is no effect or difference. For example, "There is no difference in average test scores between two teaching methods."</li>
+                <li><strong>Alternative Hypothesis (H<sub>1</sub>)</strong>: A statement suggesting there is an effect or difference. For example, "Teaching method A results in higher test scores than method B."</li>
+            </ul>
+        </li>
+        <li><strong>Choose Significance Level (&alpha;)</strong>: Commonly set at 0.05 or 5%, indicating the probability of rejecting the null hypothesis when it is actually true (Type I error).</li>
+        <li><strong>Select and Calculate a Test Statistic</strong>: The type of test statistic (e.g., z-test, t-test, chi-square) depends on the data type and sample size.</li>
+        <li><strong>Determine the p-value or Compare Against a Critical Value</strong>: 
+            <ul>
+                <li>The <strong>p-value</strong> represents the probability of observing the results assuming the null hypothesis is true. A small p-value (typically &lt; 0.05) suggests the null hypothesis is unlikely.</li>
+                <li>Alternatively, a test statistic can be compared to a critical value, determined by the chosen significance level.</li>
+            </ul>
+        </li>
+        <li><strong>Make a Decision</strong>: 
+            <ul>
+                <li><strong>Reject H<sub>0</sub></strong> if the p-value is less than &alpha; or if the test statistic exceeds the critical value, suggesting that the data supports the alternative hypothesis.</li>
+                <li><strong>Fail to reject H<sub>0</sub></strong> if the p-value is greater than &alpha;, indicating insufficient evidence to support the alternative hypothesis.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Types of Hypothesis Tests:</h3>
+    <ul>
+        <li><strong>Z-Test</strong>: Used for large sample sizes (typically n &gt; 30) and normal distributions.</li>
+        <li><strong>T-Test</strong>: Applied for small sample sizes or unknown population variance.</li>
+        <li><strong>Chi-Square Test</strong>: Tests for independence or goodness of fit with categorical data.</li>
+        <li><strong>ANOVA (Analysis of Variance)</strong>: Compares means across three or more groups.</li>
+    </ul>
+
+    <h3>Example of Hypothesis Testing in Data Analytics:</h3>
+    <p>Suppose a company wants to test if a new marketing strategy leads to higher average sales. Their hypothesis might be:</p>
+    <ul>
+        <li><strong>Null Hypothesis (H<sub>0</sub>)</strong>: The new strategy does not increase average sales.</li>
+        <li><strong>Alternative Hypothesis (H<sub>1</sub>)</strong>: The new strategy increases average sales.</li>
+    </ul>
+    <p>They conduct the test using a significance level of 0.05 and, after calculating, find a p-value of 0.03. Since 0.03 is less than 0.05, they reject H<sub>0</sub> and conclude that the new marketing strategy likely increases sales.</p>
+    
+    <p>Hypothesis testing provides a structured way to make data-driven decisions and is essential in areas such as A/B testing, quality control, clinical trials, and more.</p>
+</section>
     </main>
     <footer>
         <p>&copy; 2024 Teach Data-Analytics by Jakadeer</p>
