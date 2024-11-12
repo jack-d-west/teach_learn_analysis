@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teach Data-Analytics</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="hypothesis.html">Hypothesis Testing</a>
 
+
+        </nav>
+    </header>
+  <main>
+    <section id="t-tests">
+    <h2>T-Tests and Examples</h2>
+
+    <h3>1. One-Sample T-Test</h3>
+    <p><strong>Scenario</strong>: A nutritionist believes that the average sodium content in a particular brand of soup should be 500 mg. To test this claim, she collects a sample of 8 cans and finds their sodium content as follows (in mg): 520, 505, 495, 510, 515, 490, 480, 500.</p>
+
+    <h4>Steps:</h4>
+    <ol>
+        <li><strong>Formulate Hypotheses</strong>:
+            <ul>
+                <li><em>Null Hypothesis (H₀)</em>: The mean sodium content is 500 mg.</li>
+                <li><em>Alternative Hypothesis (H₁)</em>: The mean sodium content is not 500 mg.</li>
+            </ul>
+        </li>
+        <li><strong>Calculate the Sample Mean and Standard Deviation</strong>.
+            <p>Sample Mean ≈ 501.25 mg</p>
+        </li>
+        <li><strong>Run the One-Sample T-Test</strong> to compute the <em>t-value</em> and <em>p-value</em>.</li>
+        <li><strong>Interpret the Result</strong>: If the p-value is less than 0.05, we reject the null hypothesis, suggesting the actual mean sodium content differs from 500 mg.</li>
+    </ol>
+
+    <h3>2. Independent Two-Sample T-Test</h3>
+    <p><strong>Scenario</strong>: A psychologist wants to see if caffeine affects memory recall. They conduct a study where 15 participants receive caffeine, and another 15 receive a placebo. After an hour, all participants take a memory test. Their scores are then compared between the two groups.</p>
+
+    <h4>Steps:</h4>
+    <ol>
+        <li><strong>Formulate Hypotheses</strong>:
+            <ul>
+                <li><em>Null Hypothesis (H₀)</em>: There is no difference in memory recall scores between the caffeine and placebo groups.</li>
+                <li><em>Alternative Hypothesis (H₁)</em>: There is a difference in memory recall scores between the caffeine and placebo groups.</li>
+            </ul>
+        </li>
+        <li><strong>Calculate the Means and Standard Deviations for Each Group</strong>.</li>
+        <li><strong>Run the Independent Two-Sample T-Test</strong> to compute the <em>t-value</em> and <em>p-value</em>.</li>
+        <li><strong>Interpret the Result</strong>: If the p-value is less than 0.05, we conclude caffeine has a measurable effect on recall.</li>
+    </ol>
+
+    <h3>3. Paired T-Test</h3>
+    <p><strong>Scenario</strong>: A company introduces a training program to improve typing speed. Ten employees take a typing test before the training and another test afterward. The company wants to determine if the program led to a significant increase in typing speed.</p>
+    <p><strong>Typing speeds before training</strong>: 60, 62, 58, 65, 63, 59, 61, 60, 64, 62 (words per minute)</p>
+    <p><strong>Typing speeds after training</strong>: 67, 66, 65, 70, 69, 63, 68, 66, 71, 67</p>
+
+    <h4>Steps:</h4>
+    <ol>
+        <li><strong>Formulate Hypotheses</strong>:
+            <ul>
+                <li><em>Null Hypothesis (H₀)</em>: The mean difference in typing speeds before and after training is zero (no improvement).</li>
+                <li><em>Alternative Hypothesis (H₁)</em>: The mean difference in typing speeds before and after training is greater than zero.</li>
+            </ul>
+        </li>
+        <li><strong>Calculate the Difference Between Each Pair</strong> (typing speed before vs. after for each employee) and find the mean and standard deviation of the differences.</li>
+        <li><strong>Run the Paired T-Test</strong> to compute the <em>t-value</em> and <em>p-value</em>.</li>
+        <li><strong>Interpret the Result</strong>: If the p-value is less than 0.05, we conclude the training program significantly improved typing speed.</li>
+    </ol>
+
+    <h3>Summary of Use-Cases:</h3>
+    <ul>
+        <li><strong>One-Sample T-Test</strong>: To check if the mean of a single sample differs from a known value.</li>
+        <li><strong>Independent Two-Sample T-Test</strong>: To compare the means of two separate, independent groups.</li>
+        <li><strong>Paired T-Test</strong>: To compare means from the same group at two different times or under two different conditions.</li>
+    </ul>
+    <p>Each type of t-test helps make statistically sound conclusions based on sample data, highlighting meaningful differences and effects in various contexts.</p>
+</section>
+  </main>
