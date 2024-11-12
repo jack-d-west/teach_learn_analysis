@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teach Data-Analytics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teach Data-Analytics</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="hypothesis.html">Hypothesis Testing</a>
+            <a href="dr.html">Dimensionality Reduction</a>
+            <a href="arm.html">Association Rule Mining</a>
+            <a href="prep.html">Preprocessing</a>
 
+        </nav>
+    </header>
+    <main>
+      <section id="chi-squared-test">
+    <h2>Chi-Squared Test</h2>
+    <p>The <strong>Chi-Squared Test</strong> is a statistical method used to examine relationships between categorical variables in a dataset. It's commonly used to test for independence between two variables, helping to determine whether observed frequencies differ significantly from expected frequencies.</p>
+
+    <h3>Types of Chi-Squared Tests:</h3>
+    <ul>
+        <li><strong>Chi-Squared Test of Independence</strong>: Tests if two categorical variables are independent (e.g., whether gender affects movie genre preference).</li>
+        <li><strong>Chi-Squared Goodness of Fit Test</strong>: Tests if observed categorical data fits a specified distribution (e.g., comparing observed dice roll outcomes to the expected fair distribution).</li>
+    </ul>
+
+    <h3>Example 1: Chi-Squared Test of Independence</h3>
+    <p><strong>Scenario</strong>: A researcher wants to know if there is an association between <strong>gender</strong> and <strong>preference for a new product</strong>. They surveyed 100 people, recording responses in a table:</p>
+    
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>Likes Product</th>
+            <th>Dislikes Product</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>Male</td>
+            <td>20</td>
+            <td>30</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Female</td>
+            <td>25</td>
+            <td>25</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th>45</th>
+            <th>55</th>
+            <th>100</th>
+        </tr>
+    </table>
+    
+    <h4>Step-by-Step Calculation:</h4>
+    <ol>
+        <li><strong>Formulate Hypotheses</strong>:
+            <ul>
+                <li><strong>Null Hypothesis (H₀)</strong>: Gender and product preference are independent.</li>
+                <li><strong>Alternative Hypothesis (H₁)</strong>: Gender and product preference are associated.</li>
+            </ul>
+        </li>
+        <li><strong>Calculate Expected Counts</strong>:
+            <p>Expected count for each cell = (Row Total × Column Total) / Grand Total. For males who like the product, the expected count = (50 × 45) / 100 = 22.5.</p>
+        </li>
+        <li><strong>Calculate the Chi-Squared Statistic</strong>:
+            <p>Sum up (O - E)<sup>2</sup> / E for each cell, where O is the observed count, and E is the expected count.</p>
+        </li>
+        <li><strong>Interpret Results</strong>:
+            <ul>
+                <li>If the Chi-Squared statistic is greater than the critical value at a chosen significance level (often 0.05), we reject H₀. This means gender and preference are likely associated.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Example 2: Chi-Squared Goodness of Fit Test</h3>
+    <p><strong>Scenario</strong>: A fair six-sided die should have equal chances of landing on each side. You roll a die 60 times and get these results:</p>
+    
+    <table border="1">
+        <tr>
+            <th>Die Face</th>
+            <th>Observed Rolls</th>
+        </tr>
+        <tr><td>1</td><td>8</td></tr>
+        <tr><td>2</td><td>10</td></tr>
+        <tr><td>3</td><td>12</td></tr>
+        <tr><td>4</td><td>11</td></tr>
+        <tr><td>5</td><td>9</td></tr>
+        <tr><td>6</td><td>10</td></tr>
+    </table>
+
+    <h4>Step-by-Step Calculation:</h4>
+    <ol>
+        <li><strong>Formulate Hypotheses</strong>:
+            <ul>
+                <li><strong>Null Hypothesis (H₀)</strong>: The die is fair, so each outcome should occur equally (10 times each for 60 rolls).</li>
+                <li><strong>Alternative Hypothesis (H₁)</strong>: The die is biased.</li>
+            </ul>
+        </li>
+        <li><strong>Calculate Expected Counts</strong>:
+            <p>Since it’s a fair die, the expected count for each face is 10.</p>
+        </li>
+        <li><strong>Calculate the Chi-Squared Statistic</strong>:
+            <p>For each face, calculate (O - E)<sup>2</sup> / E, where O is the observed rolls, and E is the expected rolls (10 for each face).</p>
+        </li>
+        <li><strong>Interpret Results</strong>:
+            <ul>
+                <li>If the Chi-Squared statistic exceeds the critical value, the die may be biased. Otherwise, we do not have evidence to reject the fairness assumption.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Why Use the Chi-Squared Test?</h3>
+    <p>Chi-Squared tests allow us to determine if differences or relationships between categories are likely due to chance or are statistically significant. In the product preference example, it helps the researcher understand if preference varies by gender, while in the dice example, it tests if the die rolls are truly fair.</p>
+</section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Teach Data-Analytics by Jakadeer</p>
+    </footer>
+</body>
+</html>
